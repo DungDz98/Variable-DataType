@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<input type="text" placeholder="Physics" id="physics">
+<input type="text" placeholder="Chemistry" id="chemistry">
+<input type="text" placeholder="Biology" id="biology">
+<button type="button" onclick="average()">Average</button>
+<p id="tb"></p>
+<br>
+<input type="text" placeholder="Nhap do C" id="celsius">
+<button type="button" onclick="temperature()">Chuyen doi nhiet do</button>
+<p id="temperature"></p>
+<br>
+<input type="text" placeholder="Nhap ban kinh" id="radius">
+<button type="button" onclick="circle()">Chu vi va dien tich</button>
+<p id="circle"></p>
+<script>
+    // Diem trung binh
+    function average() {
+    let physics_score = document.getElementById('physics').value;
+    let chemistry_score = document.getElementById('chemistry').value;
+    let biology_score = document.getElementById('biology').value;
+    let average_score = (physics_score*1 + chemistry_score*1 + biology_score*1)/3;
+    document.getElementById('tb').innerHTML = 'Diem TB la : ' + average_score;
+    }
+
+    function temperature() {
+        let celsius = document.getElementById('celsius').value;
+        let fahrenheit = celsius/5*9 + 32;
+        document.getElementById('temperature').innerHTML = 'Do F la : ' + fahrenheit;
+    }
+
+    function circle() {
+        let radius = document.getElementById('radius').value;
+        let perimeter = radius*2*3.14;
+        let acreage = radius**2*3.14;
+        document.getElementById('circle').innerHTML = 'Chu vi hinh tron la : ' + perimeter + '  ' + 'Dien tich hinh tron la : ' + acreage;
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="number1">
+<input type="text" id="number2">
+<button type="button" onclick="add()">Addition(+)</button>
+<button type="button" onclick="subs()">Substraction(-)</button>
+<button type="button" onclick="multi()">Multiplication(X)</button>
+<button type="button" onclick="divi()">Division(/)</button>
+<p id="kq">Result Total</p>
+<script>
+    function add() {
+        let number_1 = document.getElementById('number1').value;
+        let number_2 = document.getElementById('number2').value;
+        let total = +number_1 + +number_2;
+        document.getElementById('kq').innerHTML = 'Result Addition ' + total;
+    }
+
+    function subs() {
+        let number_1 = document.getElementById('number1').value;
+        let number_2 = document.getElementById('number2').value;
+        let number1new = parseInt(number_1);
+        let number2new = parseInt(number_2);
+        let total = number1new - number2new;
+        document.getElementById('kq').innerHTML = 'Result Substraction ' + total;
+    }
+
+    function multi() {
+        let number_1 = document.getElementById('number1').value;
+        let number_2 = document.getElementById('number2').value;
+        let number1new = parseInt(number_1);
+        let number2new = parseInt(number_2);
+        let total = number1new * number2new;
+        document.getElementById('kq').innerHTML = 'Result Multiplication ' + total;
+    }
+
+    function divi() {
+        let number_1 = document.getElementById('number1').value;
+        let number_2 = document.getElementById('number2').value;
+        let number1new = parseInt(number_1);
+        let number2new = parseInt(number_2);
+        let total = number1new / number2new;
+        document.getElementById('kq').innerHTML = 'Result Division ' + total.toFixed(2);
+    }
+</script>
+</body>
+</html>
